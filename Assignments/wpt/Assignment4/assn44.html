@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment4</title>
+</head>
+<body>
+    <script>
+    function fetchData(url, callback){
+        console.log("Fetch data");
+        setTimeout(() => {
+
+            const error = Math.random() <0.3;
+            if(error){
+                const err = error;
+                callback(err,null);
+            }
+
+            else{
+                const res = `Response ${url}`;
+                callback(null,res);
+            }
+            
+        }, 1000);
+    }
+
+    fetchData("https://example.com/api/data", function(error, res) {
+
+        if(error){
+            console.log("Error occurred: ",error);
+        }
+        else{
+            console.log("Received:", res);
+        }
+        
+    });
+    </script>
+</body>
+</html>
