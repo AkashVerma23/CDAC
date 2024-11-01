@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom2</title>
+    <style>
+        body{
+            background-color: blanchedalmond;
+            text-align: center;
+        }
+        form{
+            background-color: aquamarine;
+        }
+        button{
+            color: chartreuse;
+            background-color: black;
+            
+        }
+    </style>
+    
+  
+</head>
+<body>
+    <form action="">
+        <label for="fname">First name</label>
+        <input type="text" id="fname"> <br>
+        <br>
+        <label for="lname">Last name</label>
+        <input type="text" id="lname"><br>
+        <br>
+        <label for="num">Contact number</label>
+        <input type="number" id="num"><br>
+        <br>
+        <label for="ema">Email</label>
+        <input type="email" id="ema"><br>
+        <br>
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+    <p id ="output"></p>
+    <script>
+        function submitForm() {
+            // Get values from the form
+            const firstName = document.getElementById('fname').value;
+            const lastName = document.getElementById('lname').value;
+            const contactNo = document.getElementById('num').value;
+            const email = document.getElementById('ema').value;
+
+            // Display the values on the browser page
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = `
+                <h3>Form Submitted</h3>
+                <p><strong>First Name:</strong> ${firstName}</p>
+                <p><strong>Last Name:</strong> ${lastName}</p>
+                <p><strong>Contact No.:</strong> ${contactNo}</p>
+                <p><strong>Email ID:</strong> ${email}</p>
+            `;
+        }
+    </script>
+</body>
+</html>

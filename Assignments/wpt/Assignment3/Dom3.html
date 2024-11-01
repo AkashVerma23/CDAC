@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+</head>
+<body>
+
+    <h2>Select & Remove Item</h2>
+    <label for="dropdown">Choose an option:</label>
+    <select id="dropdown">
+        <option value="1">Carrot cake</option>
+        <option value="2">Daifuku cake</option>
+        <option value="3">Tiramisu cake</option>
+        <option value="4">Chiffon cake</option>
+    </select>
+    
+    <button onclick="removeSelectedItem()">Remove Current Item</button>
+
+    <script>
+
+        function removeSelectedItem(){
+
+            const dropdown = document.getElementById('dropdown');
+
+            if(dropdown.options.length > 0){
+                dropdown.remove(dropdown.selectedIndex);
+                alert("Cake removed :'( ");
+            } else{
+                alert("Cake Empty! :( ")
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
