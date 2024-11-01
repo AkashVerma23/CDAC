@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width ">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 200px;
+            margin-bottom: 200px;
+            width: 100%;
+            height: 100%;
+        }
+
+        form {
+            background-color: #5ed1ac;
+            margin: 50;
+            padding: 350px; 
+            max-width: 700px;
+            border-radius: 50px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+
+        input[type="text"], input[type="email"], input[type="date"], input[type="tel"], textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+        }
+
+        .form-inline {
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #197c7c;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #197c7c;
+        }
+
+        button[type="reset"] {
+            background-color: #197c7c;
+        }
+
+        button[type="reset"]:hover {
+            background-color: #197c7c;
+        }
+
+        th, td {
+            padding-top: 8px;
+            padding-bottom: 18px;
+            padding-left: 28px;
+            padding-right: 35px;
+            }
+    </style>
+</head>
+<body>
+
+    <form action="" method="post">
+        <h2>Student Registration Form</h2>
+
+        <div class="form-group">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" required > <span> Max 30 characters.</span>
+        </div>
+
+        <div class="form-group">
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" required>
+        </div>
+
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+        </div>
+
+        <div class="form-group">
+            <label>Gender:</label>
+            <br>
+            <input type="radio" id="male" name="gender" value="Male" required> Male
+            <input type="radio" id="female" name="gender" value="Female" required> Female
+            <input type="radio" id="other" name="gender" value="Other" required> Other
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+        </div>
+
+        <div class="form-inline">
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pincode">Pincode:</label>
+                <input type="text" id="pincode" name="pincode" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required>
+        </div>
+
+        <div class="form-group">
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required>
+        </div>
+
+        <div class="form-group">
+            <label>Hobbies:</label>
+            <input type="radio" name="hobbies" value="Reading"> Reading
+            <input type="radio" name="hobbies" value="Sports"> Sports
+            <input type="radio" name="hobbies" value="Music"> Music
+            <input type="radio" name="hobbies" value="Travel"> Travel
+        </div>
+
+        <div class="form-group">
+            <label for="qualification">Qualification:</label>
+            <table>
+                <tr>
+                    <th>Qualification</th>
+                    <th>Institute</th>
+                    <th>Year of Passing</th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="qualification1" required></td>
+                    <td><input type="text" name="institute1" required></td>
+                    <td><input type="text" name="year1" required></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="qualification2"></td>
+                    <td><input type="text" name="institute2"></td>
+                    <td><input type="text" name="year2"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="qualification3"></td>
+                    <td><input type="text" name="institute3"></td>
+                    <td><input type="text" name="year3"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="form-group">
+            <label>Courses Applied For:</label>
+            <input type="radio" name="courses" value="Computer Science" required> Computer Science
+            <input type="radio" name="courses" value="Electrical Engineering" required> Electrical Engineering
+            <input type="radio" name="courses" value="Mechanical Engineering" required> Mechanical Engineering
+            <input type="radio" name="courses" value="Civil Engineering" required> Civil Engineering
+        </div>
+
+        <div class="form-group">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+
+</body>
+</html>
